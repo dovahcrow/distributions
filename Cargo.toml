@@ -1,0 +1,17 @@
+[package]
+
+name = "distributions"
+version = "0.0.1"
+authors = ["wooya <doomsplayer@gmail.com>"]
+description = "Some statistic distributions written in rust"
+keywords = ["distribution","statistic","numerical","math"]
+license = "MIT"
+
+exclude = [
+	"Cargo.toml~",
+	]
+	
+[lib]
+path = "src/lib.rs"
+name = "distributions"
+test = true
