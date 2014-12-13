@@ -1,17 +1,33 @@
 [package]
 
 name = "distributions"
-version = "0.0.1"
+version = "0.0.2"
 authors = ["wooya <doomsplayer@gmail.com>"]
 description = "Some statistic distributions written in rust"
 keywords = ["distribution","statistic","numerical","math"]
 license = "MIT"
+repository = "https://github.com/doomsplayer/distributions"
+readme = "README.md"
 
 exclude = [
 	"Cargo.toml~",
 	]
+[profile.dev]
+opt-level = 0
+debug = true
+rpath = false
+lto = false
+
+[profile.release]
+opt-level = 0
+debug = false
+rpath = false
+lto = false
 	
 [lib]
 path = "src/lib.rs"
 name = "distributions"
 test = true
+
+[dependencies]
+GSL = "~0.4.11"
